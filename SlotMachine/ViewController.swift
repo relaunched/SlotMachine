@@ -46,6 +46,7 @@ class ViewController: UIViewController {
         setupContainerViews()
         setupFirstContainer(self.firstContainer)
         setupSecondContainer(self.secondContainer)
+        setupThirdContainer(self.thirdContainer)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
