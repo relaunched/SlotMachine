@@ -177,7 +177,7 @@ class ViewController: UIViewController {
         self.winnerPaidTitleLabel.textColor = UIColor.blackColor()
         self.winnerPaidTitleLabel.font = UIFont(name: "AmericanTypewriter", size: 14)
         self.winnerPaidTitleLabel.sizeToFit()
-        self.betTitleLabel.center = CGPoint(x: containerView.frame.width * kSixth * 5, y: containerView.frame.height * kthird * 2)
+        self.betTitleLabel.center = CGPoint(x: containerView.frame.width * kSixth * 5, y: containerView.frame.height * kThird * 2)
         containerView.addSubview(self.winnerPaidTitleLabel)
         
     }
