@@ -32,6 +32,8 @@ class ViewController: UIViewController {
     var betOneButton: UIButton!
     var betMaxButton: UIButton!
     var spinButton: UIButton!
+    
+    var slots:[[Slot]] = []
 
         
     let kMarginForView:CGFloat = 10.0
@@ -83,8 +85,11 @@ class ViewController: UIViewController {
     }
 
     func spinButtonPressed (button: UIButton) {
-        println("spinButtonPressed")
+        slots = Factory.createSlot()
+        setupSecondContainer(self.secondContainer)
     }
+    
+    
 
     func setupContainerViews() {
         self.firstContainer = UIView(frame: CGRect(
@@ -193,7 +198,6 @@ class ViewController: UIViewController {
         self.creditsTitleLabel.font = UIFont(name: "AmericanTypewriter", size: 14)
         self.creditsTitleLabel.sizeToFit()
         self.creditsTitleLabel.center = CGPoint(x: containerView.frame.width * kSixth, y: containerView.frame.height * kThird * 2)
-        println(self.creditsTitleLabel.center)
         containerView.addSubview(self.creditsTitleLabel)
         
         self.betTitleLabel = UILabel()
@@ -202,7 +206,6 @@ class ViewController: UIViewController {
         self.betTitleLabel.font = UIFont(name: "AmericanTypewriter", size: 14)
         self.betTitleLabel.sizeToFit()
         self.betTitleLabel.center = CGPoint(x: containerView.frame.width * kSixth * 3, y: containerView.frame.height * kThird * 2)
-        println(self.betTitleLabel.center)
         containerView.addSubview(self.betTitleLabel)
         
         self.winnerPaidTitleLabel = UILabel()
@@ -211,7 +214,6 @@ class ViewController: UIViewController {
         self.winnerPaidTitleLabel.font = UIFont(name: "AmericanTypewriter", size: 14)
         self.winnerPaidTitleLabel.sizeToFit()
         self.winnerPaidTitleLabel.center = CGPoint(x: containerView.frame.width * kSixth * 5, y: containerView.frame.height * kThird * 2)
-        println(self.winnerPaidTitleLabel.center)
         containerView.addSubview(self.winnerPaidTitleLabel)
         
     }

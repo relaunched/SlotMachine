@@ -19,7 +19,7 @@ class Factory {
         for var containerNumber = 0; containerNumber < kNumberOfContainers; ++containerNumber {
             var slotArray:[Slot] = []
             for var slotNumber = 0; slotNumber < kNumberOfSlots; ++slotNumber{
-                var slot = Slot(value: 0, image: UIImage(named: ""), isRed: true)
+                var slot = Factory.createSlot(slotArray)
                 slotArray.append(slot)
             }
             slots.append(slotArray)
@@ -28,7 +28,9 @@ class Factory {
         return slots
     }
     
-    func createSlot (currentCards: [Slot]) -> Slot {
+    
+    class func createSlot (currentCards: [Slot]) -> Slot {
+        
         var currentCardValues: [Int] = []
         
         for slot in currentCards {
@@ -36,7 +38,6 @@ class Factory {
         }
         
         var randomNumber = Int(arc4random_uniform(UInt32(13)))
-        
         while contains(currentCardValues, randomNumber + 1) {
             randomNumber = Int(arc4random_uniform(UInt32(13)))
         }
@@ -44,18 +45,19 @@ class Factory {
         var slot:Slot
         
         switch randomNumber {
+            
         case 0:
             slot = Slot(value: 1, image: UIImage(named: "Ace"), isRed: true)
             
         case 1:
             slot = Slot(value: 2, image: UIImage(named: "Two"), isRed: true)
-            
+        
         case 2:
             slot = Slot(value: 3, image: UIImage(named: "Three"), isRed: true)
             
         case 3:
             slot = Slot(value: 4, image: UIImage(named: "Four"), isRed: true)
-        
+            
         case 4:
             slot = Slot(value: 5, image: UIImage(named: "Five"), isRed: false)
             
@@ -73,7 +75,7 @@ class Factory {
             
         case 9:
             slot = Slot(value: 10, image: UIImage(named: "Ten"), isRed: true)
-        
+            
         case 10:
             slot = Slot(value: 11, image: UIImage(named: "Jack"), isRed: false)
             
