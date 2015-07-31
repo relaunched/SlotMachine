@@ -279,6 +279,17 @@ class ViewController: UIViewController {
 
     }
     
+    func removeSlotImageViews() {
+        if self.secondContainer != nil {
+            let container: UIView? = self.secondContainer
+            let subViews:Array? = container!.subviews
+            for view in subViews!{
+                view.removeFromSuperview()
+            }
+            
+        }
+    }
+    
     
 }
 
