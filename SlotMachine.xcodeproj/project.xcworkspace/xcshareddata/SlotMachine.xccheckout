@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>BF31AE4D-F4C7-4E2B-B954-59312E536D4F</string>
 	<key>IDESourceControlProjectName</key>
-	<string>SlotMachine</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>534A4CF9E6A17415CC5FEC005A04503C4B62F966</key>
 		<string>github.com:relaunched/SlotMachine.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SlotMachine.xcodeproj</string>
+	<string>SlotMachine.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>534A4CF9E6A17415CC5FEC005A04503C4B62F966</key>
