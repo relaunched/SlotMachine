@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     //stats
     
     var credits = 0
-    var currentBet = 0
+    var currentBet = 1
     var winnings = 0
     
 
@@ -127,7 +127,7 @@ class ViewController: UIViewController {
         var winningsMultiplier = SlotBrain.computeWinnings(slots)
         winnings = winningsMultiplier * currentBet
         credits += winnings
-        currentBet = 0
+        currentBet = 1
         updateMainView()
     }
     
@@ -340,7 +340,7 @@ class ViewController: UIViewController {
         self.setupSecondContainer(self.secondContainer)
         credits = 50
         winnings = 0
-        currentBet = 0
+        currentBet = 1
         
         updateMainView()
     }
